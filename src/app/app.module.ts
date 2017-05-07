@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutes } from './app.routing';
 
@@ -16,6 +17,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeroSearchComponent } from './components/hero-search/hero-search.component';
 
 import { HeroService } from './services/hero.service';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -23,10 +25,12 @@ import { HeroService } from './services/hero.service';
     HeroDetailComponent,
     HeroesComponent,
     DashboardComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
